@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script src="index.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("ka2ITmhoSr3TqXfml");
+   })();
+</script>
+</head>
+<body>
+    <div class="container border mt-3 bg-light">
+        <div class="row">
+            <div class="col-md-6 p-5 bg-primary text-white">
+                <h1>Hi there!</h1>
+                <h4>
+                    Fill in the form and be registered
+                </h4>
+            </div>
+            <div class="col-md-6 py-3">
+              <h1>Register</h1>
+              <div class="form-group">
+                <h5 for="name">Name</h5>
+                <input 
+                 type="text"
+                 class="form-control" 
+                 id="name" 
+                 placeholder="Enter your Name" required
+                 >
+              </div>
+              <div class="form-group">
+                <h5 for="email">Email</h5>
+                <input 
+                 type="email"
+                 class="form-control" 
+                 id="email" 
+                 placeholder="Enter your email" required
+                />
+              </div>
+              <div class="form-group">
+                <h5 for="message">Your whatsapp number</h5>
+                <textarea
+                 id="message"
+                 rows="1"
+                  class="form-control">
+                </textarea>
+              </div>
+              <button class="btn btn-primary" onclick="sendMail()">Send</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
